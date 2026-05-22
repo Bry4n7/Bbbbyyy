@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2026 World Cup - Console Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="vibrant-bg"></div>
+
+  <div class="screen-container">
+    
+    <header class="top-bar">
+      <div class="logo-area">
+        <h1>WORLD CUP 2026™ <span>| OFFICIAL HUB</span></h1>
+      </div>
+      <div class="user-area">
+        <button id="backBtn" class="back-btn" onclick="goHome()" style="display: none;">◀ MAIN MENU</button>
+        <span class="coins">🪙 12,500</span>
+        <span id="userProfile" class="user-profile">GUEST_PLAYER</span>
+      </div>
+    </header>
+            <div id="crossbarScoreBoard" class="score-display" style="color: #ff5400;">0</div>
+            <p class="instructions">Click anywhere to stop the moving power bar. If it lands exactly in the green zone, you'll ping the crossbar!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dribbleTab" class="tab-content">
+        <h2 class="section-title">SKILL GAMES: DRIBBLE DASH</h2>
+        <div class="game-ui-container">
+          <div class="game-wrapper">
+            <canvas id="dribbleCanvas" width="800" height="400"></canvas>
+            <div id="dribbleOverlay" class="game-overlay"></div>
+          </div>
+          <div class="game-sidebar">
+            <h3>SURVIVAL SCORE</h3>
+            <div id="dribbleScoreBoard" class="score-display" style="color: #9d4edd;">0</div>
+            <p class="instructions">Move your mouse left and right over the canvas to control the ball. Dodge the incoming defenders sliding at you! Speed increases over time.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

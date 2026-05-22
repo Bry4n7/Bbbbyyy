@@ -22,6 +22,203 @@
         <span id="userProfile" class="user-profile">GUEST_PLAYER</span>
       </div>
     </header>
+
+    <main class="content-area">
+
+      <section id="homeTab" class="tab-content active">
+        <div class="console-dashboard">
+          
+          <div class="dash-col">
+            <div class="dash-card play-match" onclick="showTab('groupsTab')">
+              <div class="card-header">CENTRAL</div>
+              <div class="play-match-content">
+                <h2>CHOOSE TEAM</h2>
+                <div class="match-preview">
+                  <div class="team-badge cruz-azul">USA</div>
+                  <span>&</span>
+                  <div class="team-badge toluca">MEX</div>
+                  <span>&</span>
+                  <div class="team-badge cruz-azul" style="background:#da291c;">CAN</div>
+                </div>
+                <p class="subtitle">Click here to pick from all 48 nations!</p>
+              </div>
+            </div>
+            
+            <div class="dash-row">
+              <div class="dash-card white-card" onclick="showTab('scheduleTab')" style="flex: 2;">
+                <h3>MATCH SIMULATOR</h3>
+                <p class="desc">Simulate all 72 Group Fixtures & Odds</p>
+                <div class="boot-icon">🗓️</div>
+              </div>
+            </div>
+
+            <div class="music-player">
+              <div class="card-header" style="background: var(--wc-purple); color: white; border-top-left-radius: 4px; border-top-right-radius: 4px;">🎵 YOUTUBE MUSIC: FIFA SOUNDTRACK</div>
+              <iframe style="border-radius: 0 0 4px 4px; border: none; background: #000;" width="100%" height="152" src="https://www.youtube.com/embed/videoseries?list=PLB8A8A1DF6E4A8CC6&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="dash-col games-column">
+            
+            <div class="hosts-gallery" onclick="showTab('groupsTab')">
+              <div class="host-pic" style="background-image: url('https://images.unsplash.com/photo-1551280857-2b9bae120c51?auto=format&fit=crop&w=400&q=80'); border-left: 4px solid #0033a0;">
+                <div class="host-label">USA<br><span style="font-size:0.8rem; font-weight:300;">Gio Reyna</span></div>
+              </div>
+              <div class="host-pic" style="background-image: url('https://images.unsplash.com/photo-1518605368461-1ee7e16852f6?auto=format&fit=crop&w=400&q=80'); border-left: 4px solid #006847;">
+                <div class="host-label">MEX<br><span style="font-size:0.8rem; font-weight:300;">Edson Álvarez</span></div>
+              </div>
+              <div class="host-pic" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbb19255cb?auto=format&fit=crop&w=400&q=80'); border-left: 4px solid #da291c;">
+                <div class="host-label">CAN<br><span style="font-size:0.8rem; font-weight:300;">J. David</span></div>
+              </div>
+            </div>
+            
+            <div class="scrollable-games">
+                <div class="dash-row">
+                  <div class="dash-card white-card game-card" onclick="showTab('gameTab')" style="border-left-color: var(--wc-green);">
+                    <div class="settings-content">
+                      <h3>PENALTY HERO</h3>
+                      <p class="desc">Beat the keeper!</p>
+                    </div>
+                    <div class="gear-icon">🥅</div>
+                  </div>
+                  <div class="dash-card white-card game-card" onclick="showTab('triviaTab')" style="border-left-color: #ffd700; background: #fff8d6;">
+                    <div class="settings-content">
+                      <h3>WC TRIVIA</h3>
+                      <p class="desc">Test your knowledge!</p>
+                    </div>
+                    <div class="gear-icon">🧠</div>
+                  </div>
+                </div>
+
+                <div class="dash-row">
+                  <div class="dash-card white-card game-card" onclick="showTab('juggleTab')">
+                    <div class="settings-content">
+                      <h3>KEEPIE UPPIE</h3>
+                      <p class="desc">Juggle the ball!</p>
+                    </div>
+                    <div class="gear-icon">⚽</div>
+                  </div>
+                  <div class="dash-card white-card game-card" onclick="showTab('targetTab')" style="border-left-color: var(--wc-cyan);">
+                    <div class="settings-content">
+                      <h3>TARGET SHOOT</h3>
+                      <p class="desc">Get the ball IN the rings!</p>
+                    </div>
+                    <div class="gear-icon">🎯</div>
+                  </div>
+                </div>
+
+                <div class="dash-row">
+                    <div class="dash-card white-card game-card" onclick="showTab('crossbarTab')" style="border-left-color: #ff5400;">
+                      <div class="settings-content">
+                        <h3>CROSSBAR CHAL.</h3>
+                        <p class="desc">Time your power perfect!</p>
+                      </div>
+                      <div class="gear-icon">📏</div>
+                    </div>
+                    <div class="dash-card white-card game-card" onclick="showTab('dribbleTab')" style="border-left-color: #9d4edd;">
+                      <div class="settings-content">
+                        <h3>DRIBBLE DASH</h3>
+                        <p class="desc">Dodge the defenders!</p>
+                      </div>
+                      <div class="gear-icon">🏃‍♂️</div>
+                    </div>
+                  </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <section id="groupsTab" class="tab-content">
+        <h2 class="section-title">SELECT YOUR NATION</h2>
+        <p style="color: #ccc; margin-bottom: 20px;">Click on any of the 48 teams below to select them as your active profile team.</p>
+        <div id="groupsContainer" class="tile-grid"></div>
+      </section>
+
+      <section id="scheduleTab" class="tab-content">
+        <div class="schedule-header">
+          <div>
+            <h2 class="section-title">FIXTURES & SIMULATOR</h2>
+            <p style="color: #ccc; margin-bottom: 20px;">Review the Win (1), Draw (X), and Loss (2) odds for all 72 Group Matches. Click SIM to play it out!</p>
+          </div>
+          <button class="sim-btn refresh-btn" onclick="renderSchedule()">🔄 REFRESH ALL</button>
+        </div>
+        <div id="scheduleContainer" class="list-grid"></div>
+      </section>
+
+      <section id="gameTab" class="tab-content">
+        <h2 class="section-title">SKILL GAMES: PENALTY HERO</h2>
+        <div class="game-ui-container">
+          <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div id="gameOverlay" class="game-overlay"></div>
+          </div>
+          <div class="game-sidebar">
+            <h3>DIFFICULTY</h3>
+            <div class="difficulty-selector">
+              <button class="diff-btn" id="diff-easy" onclick="setDifficulty('easy')">EASY</button>
+              <button class="diff-btn active" id="diff-medium" onclick="setDifficulty('medium')">MED</button>
+              <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">HARD</button>
+            </div>
+            <h3 style="margin-top: 30px;">CURRENT SCORE</h3>
+            <div id="scoreBoard" class="score-display">0</div>
+            <p class="instructions">Click to shoot. The ball speed is random, and Volpi NEVER stops moving!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="juggleTab" class="tab-content">
+        <h2 class="section-title">SKILL GAMES: KEEPIE UPPIE</h2>
+        <div class="game-ui-container">
+          <div class="game-wrapper">
+            <canvas id="juggleCanvas" width="800" height="400"></canvas>
+            <div id="juggleOverlay" class="game-overlay"></div>
+          </div>
+          <div class="game-sidebar">
+            <h3>JUGGLES</h3>
+            <div id="juggleScoreBoard" class="score-display">0</div>
+            <p class="instructions">Click the ball to bounce it back up. Don't let it hit the grass! Gravity increases over time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="targetTab" class="tab-content">
+        <h2 class="section-title">SKILL GAMES: TARGET SHOOT</h2>
+        <div class="game-ui-container">
+          <div class="game-wrapper">
+            <canvas id="targetCanvas" width="800" height="400"></canvas>
+            <div id="targetOverlay" class="game-overlay"></div>
+          </div>
+          <div class="game-sidebar">
+            <h3>TARGETS HIT</h3>
+            <div id="targetScoreBoard" class="score-display">0</div>
+            <p class="instructions">Click to shoot. The ball will fly into the distance. Time your shot so it lands INSIDE the moving neon rings!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="triviaTab" class="tab-content">
+        <h2 class="section-title">WORLD CUP TRIVIA</h2>
+        <div class="trivia-container">
+          <div class="trivia-sidebar">
+            <h3>SCORE</h3>
+            <div id="triviaScore" class="score-display" style="color: #ffd700; text-shadow: 0 0 15px rgba(255,215,0,0.5);">0</div>
+            <p class="instructions">Answer these historical World Cup questions to prove you are the ultimate fan.</p>
+          </div>
+          <div class="trivia-main" id="triviaMain">
+            </div>
+        </div>
+      </section>
+
+      <section id="crossbarTab" class="tab-content">
+        <h2 class="section-title">SKILL GAMES: CROSSBAR CHALLENGE</h2>
+        <div class="game-ui-container">
+          <div class="game-wrapper">
+            <canvas id="crossbarCanvas" width="800" height="400"></canvas>
+            <div id="crossbarOverlay" class="game-overlay"></div>
+          </div>
+          <div class="game-sidebar">
+            <h3>CROSSBARS HIT</h3>
             <div id="crossbarScoreBoard" class="score-display" style="color: #ff5400;">0</div>
             <p class="instructions">Click anywhere to stop the moving power bar. If it lands exactly in the green zone, you'll ping the crossbar!</p>
           </div>
